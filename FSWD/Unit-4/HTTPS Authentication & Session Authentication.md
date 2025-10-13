@@ -27,29 +27,14 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-  const auth = req.headers.authorization;
-  if (!auth || auth.indexOf('Basic ') === -1) {
-    res.set('WWW-Authenticate', 'Basic realm="localhost"');
-    return res.status(401).send('Authentication required.');
-  }
-
-  const credentials = Buffer.from(auth.split(' ')[1], 'base64').toString().split(':');
-  const [username, password] = credentials;
-
-  if (username === 'admin' && password === 'password') {
-    next();
-  } else {
-    res.status(403).send('Forbidden');
-  }
+  const b64 = req.headers.authorization?.split(' ')[1];
+  if (!b64) return res.status(401).set('WWW-Authenticate', 'Basic').send('Auth required');
+  const [user, pass] = Buffer.from(b64, 'base64').toString().split(':');
+  user === 'admin' && pass === '1234' ? next() : res.status(403).send('Forbidden');
 });
 
-app.get('/', (req, res) => {
-  res.send('Authenticated successfully!');
-});
-
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+app.get('/', (req, res) => res.send('Authenticated'));
+app.listen(3000);
 ```
 
 ### 🔒 Security Notes
@@ -83,26 +68,18 @@ const express = require('express');
 const session = require('express-session');
 const app = express();
 
-app.use(session({
-  secret: 'mySecretKey',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false } // Use true with HTTPS
-}));
+app.use(session({ secret: 'key', resave: false, saveUninitialized: true }));
 
 app.post('/login', (req, res) => {
-  // Assume login is successful
-  req.session.user = { username: 'Ajitha' };
+  req.session.user = 'Ajitha';
   res.send('Logged in');
 });
 
 app.get('/dashboard', (req, res) => {
-  if (req.session.user) {
-    res.send(`Welcome ${req.session.user.username}`);
-  } else {
-    res.status(401).send('Please login first');
-  }
+  req.session.user ? res.send('Welcome Ajitha') : res.status(401).send('Login first');
 });
+
+app.listen(3000);
 ```
 
 ### 🧠 Benefits
