@@ -66,8 +66,9 @@ Petri Nets are a **powerful tool for modeling dynamic systems**, capturing both 
 ✅ **Keywords included:** Petri Nets, places, transitions, arcs, tokens, firing, 8-tuple, P, T, I, O, H, PAR, PRED, MP, linear algebra, modeling, software requirements, software architecture, processes, analysis.
 
 ---
-
+```Diagram
    [Off] o----> (Switch On) ----> o [On]
      ^                             |
      |                             |
      +---- (Switch Off) <----------+
+```
