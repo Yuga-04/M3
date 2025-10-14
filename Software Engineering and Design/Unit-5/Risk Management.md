@@ -1,5 +1,3 @@
----
-
 ## *Q5. Risk Management in Software Engineering (13 Marks)*
 
 ### *(a) Definition and Approaches (5 Marks)*
