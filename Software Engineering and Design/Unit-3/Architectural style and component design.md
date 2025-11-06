@@ -97,3 +97,5 @@ Architectural styles provide the blueprint for organizing the overall system, wh
 ---
 
 Would you like me to make a **short, handwritten-friendly version (1½ pages)** for this — perfect for exam writing in under 10 minutes?
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/8415e8ed-1c7d-415d-94ad-ded61cc0050b" />
+
