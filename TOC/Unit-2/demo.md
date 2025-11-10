@@ -1,3 +1,4 @@
+Perfect 👍 — let’s now present your grammar **step-by-step exactly like the blackboard image** (clear, ordered, with steps and substitution tracking).
 We’ll convert your grammar:
 
 [
@@ -200,3 +201,7 @@ A_3 &→ aA_3A_3 ;|; aA_2A_2 ;|; aA_3A_2 ;|; b
 * No unit productions
   Hence the grammar is in **Greibach Normal Form (GNF)** ✔️
 
+---
+
+Would you like me to make this same explanation in **blackboard-style format (like your image)** — with steps labeled (Step 1, Step 2, Step 3…) and boxed final results?
+I can render it as a **formatted printable page** that looks exactly like a classroom board note.
