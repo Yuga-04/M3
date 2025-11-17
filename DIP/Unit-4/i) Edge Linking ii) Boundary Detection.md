@@ -53,19 +53,25 @@ This method examines **local edge pixel neighborhoods**.
     Then they are linked as part of the same edge.
 
 **Gradient magnitude**:
-[
-|\nabla F| = \sqrt{F_x^2 + F_y^2}
-]
+
+
+<img width="288" height="115" alt="image" src="https://github.com/user-attachments/assets/077f7cf1-474e-4fe2-8967-390f42da84ab" />
+
+
 
 **Gradient direction**:
-[
-\alpha(x,y) = \tan^{-1}(F_y/F_x)
-]
+
+
+<img width="330" height="72" alt="image" src="https://github.com/user-attachments/assets/20c582a9-85b2-4e36-9175-28f19b2714df" />
+
+
 
 **Condition for linking** (from PDF):
-[
-|M(s,t) - M(x,y)| \le T
-]
+
+
+<img width="320" height="63" alt="image" src="https://github.com/user-attachments/assets/884e1ed4-cd12-42c0-afbb-094c201955f5" />
+
+
 where (T) is a threshold.
 
 This method is simple and works well for clean images.
