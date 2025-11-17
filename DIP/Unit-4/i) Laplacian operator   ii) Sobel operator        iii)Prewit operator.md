@@ -19,9 +19,10 @@ The Laplacian operator is an **isotropic** (rotation-invariant) *second-order de
 ### **Concept**
 
 The Laplacian of an image ( f(x,y) ) is defined as:
-[
-\nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2}
-]
+
+
+<img width="274" height="108" alt="image" src="https://github.com/user-attachments/assets/446bc45e-9e92-43d8-b59f-e9a4253c18e7" />
+
 
 It highlights **gray-level discontinuities** by responding strongly to intensity changes.
 
@@ -94,9 +95,11 @@ The Sobel operator detects edges using **gradient magnitude** in both horizontal
 2. Convolve image with Gy → detects **horizontal edges**
 
 3. Compute gradient magnitude:
-   [
-   |\nabla f| = \sqrt{G_x^2 + G_y^2}
-   ]
+
+
+  <img width="262" height="80" alt="image" src="https://github.com/user-attachments/assets/16d5e13e-9b2e-4f5a-b53f-872fece77dd4" />
+
+
    (Approximation: ( |G_x| + |G_y| ))
 
 4. Threshold the gradient to obtain edge map.
