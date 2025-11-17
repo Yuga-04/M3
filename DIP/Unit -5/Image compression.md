@@ -1,5 +1,3 @@
-Here is your **content arranged in the correct, clean, logical order** for notes or exam answers:
-
 ---
 
 # **Image Compression and Variable Length Coding Schemes (13 Marks)**
