@@ -36,9 +36,10 @@ Set of pixels that would "flow" to the same minimum point.
 
 ### **Flooding Levels (T[n])**
 
-[
-T[n] = { (s,t) \mid g(s,t) < n }
-]
+
+<img width="360" height="76" alt="image" src="https://github.com/user-attachments/assets/18addffd-e624-4dd9-ae39-9a4c6e066e1c" />
+
+
 All pixels whose intensity is below the plane ( g(x,y)=n ).
 
 ### **C[n]**
@@ -65,9 +66,12 @@ This demonstrates the ability of the watershed method to provide **fully connect
 ### **Step 1: Identify regional minima**
 
 Let the set of minima be:
-[
-M_1, M_2, ..., M_n
-]
+
+
+<img width="211" height="65" alt="image" src="https://github.com/user-attachments/assets/44151ec2-4e7c-439f-ae2c-628ae1ddf0e2" />
+
+
+
 Each minimum corresponds to one catchment basin.
 
 ---
@@ -75,13 +79,18 @@ Each minimum corresponds to one catchment basin.
 ### **Step 2: Initialize flooding**
 
 Let flooding begin at gray-level:
-[
-n = \text{min intensity} + 1
-]
+
+
+<img width="305" height="68" alt="image" src="https://github.com/user-attachments/assets/d305f7e1-b04d-4a48-a29f-bf75deeee7a9" />
+
+
+
 Initialize:
-[
-C[\text{min}+1] = T[\text{min}+1]
-]
+
+
+<img width="346" height="86" alt="image" src="https://github.com/user-attachments/assets/73ce75c9-e169-4dc6-b4df-583dea4a6fd2" />
+
+
 
 ---
 
@@ -116,9 +125,10 @@ Each component can be:
 ### **Step 4: Repeat**
 
 Continue the flooding process up to:
-[
-n = \text{max intensity} + 1
-]
+
+
+<img width="302" height="55" alt="image" src="https://github.com/user-attachments/assets/d6028dbc-042b-4c57-a3f7-7e3133f69749" />
+
 
 At the end:
 
