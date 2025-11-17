@@ -138,7 +138,8 @@ The human visual system can adapt to an extremely wide range of light intensitie
 ---
 
 
-<img width="716" height="521" alt="image" src="https://github.com/user-attachments/assets/79f76237-6b91-42a3-acd7-df48ea10de7d" />
+<img width="716" height="521" alt="image" src="https://github.com/user-attachments/assets/79f76237-6b91-42a3-acd7-df48ea10de7d" /><img width="1448" height="478" alt="image" src="https://github.com/user-attachments/assets/c703f1a3-026a-4657-9e20-cae6e352a8df" />
+
 
 
 ### ✔ **Diagram Description**
