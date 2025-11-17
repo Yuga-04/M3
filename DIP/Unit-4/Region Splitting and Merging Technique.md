@@ -22,8 +22,9 @@ This ensures regions are neither too large nor too small, and each final region 
 
 Splitting uses a **pyramidal / quad-tree structure**:
 
-* A region of size ( m \times m )
-* Is split into **four** ( \frac{m}{2} \times \frac{m}{2} ) sub-regions
+* A region of size MxM
+* Is split into **four** <img width="240" height="48" alt="image" src="https://github.com/user-attachments/assets/beaf1410-da6c-4aa4-8cf8-a57544d35df2" />
+ sub-regions
 * Splitting continues until all sub-regions meet the uniformity requirement
 
 *(Figure from PDF: Each square is split recursively into four smaller squares until all squares satisfy homogeneity)*
@@ -34,9 +35,9 @@ Splitting uses a **pyramidal / quad-tree structure**:
 
 A region is considered **homogeneous** if:
 
-[
-\sigma < T
-]
+
+<img width="98" height="47" alt="image" src="https://github.com/user-attachments/assets/aa6c6d6d-a2fe-4f18-9a39-3ff2187f67f9" />
+
 
 Where:
 
@@ -47,9 +48,9 @@ If intensity variation is small, the region is uniform.
 
 Uniformity is computed as:
 
-[
-\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N}(I_i - \mu)^2}
-]
+
+<img width="341" height="151" alt="image" src="https://github.com/user-attachments/assets/d24b9c3e-f2f1-45fe-81d4-7aeb6de26751" />
+
 
 where
 
@@ -103,9 +104,9 @@ Merging combines adjacent regions that are **similar**.
 
 Similarity condition often uses:
 
-[
-|\mu_A - \mu_B| < T
-]
+
+<img width="213" height="74" alt="image" src="https://github.com/user-attachments/assets/4a6fc0a2-cba3-4a65-b2b6-f3e6b69f62db" />
+
 
 Graphically, merging allows forming **irregular-shaped meaningful regions**, unlike purely square splits.
 
