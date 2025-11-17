@@ -105,4 +105,12 @@ Shrinking an image spreads its spectrum; enlarging compresses it. This explains 
 
 ---
 
-If you want this answer shortened to **10 marks**, expanded to **15 marks**, or formatted in **handwritten style**, I can do that too.
+## **3. Applications of These Properties**
+
+* Faster and efficient filtering through convolution–multiplication property
+* Edge detection and image enhancement
+* Analytical study of periodic noise
+* Motion estimation using shifting property
+* Compression and reconstruction using symmetry and energy conservation
+
+---
