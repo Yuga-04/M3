@@ -13,6 +13,10 @@ Together, these processes convert a continuous image into a matrix of discrete p
 
 # **1. IMAGE SAMPLING**
 
+
+<img width="389" height="178" alt="image" src="https://github.com/user-attachments/assets/5194ebc3-486e-4b7e-9445-3792cbd6b9f3" />
+
+
 Sampling refers to **digitizing the spatial coordinates** of an image.
 In an analog image, both the spatial domain (x and y) and amplitude are continuous. Sampling is performed on the **independent variables**, i.e., the spatial coordinates.
 
@@ -44,6 +48,10 @@ Example:
 
 The notes explain sampling using a signal curve. By taking samples along the x-axis, the continuous signal is represented by discrete sample points. However, these points still have continuous vertical (gray) values until quantization occurs.
 
+
+<img width="893" height="480" alt="image" src="https://github.com/user-attachments/assets/9609402a-6d77-44ba-b42e-d2666f7a661f" />
+
+
 ---
 
 # **2. IMAGE QUANTIZATION**
@@ -54,11 +62,19 @@ Quantization refers to **digitizing the amplitude values** of the sampled image.
 
 Quantization is the process of mapping continuous amplitude values into a finite number of discrete gray levels.
 
+
+<img width="826" height="435" alt="image" src="https://github.com/user-attachments/assets/dfd753cd-7bb4-4114-a876-e442dcb3a8f2" />
+
+
 ### **Concept:**
 
 After sampling, the selected points (pixels) still have real-valued continuous amplitudes. Quantization assigns each pixel to the nearest discrete level.
 
 ### **Example from the PDF:**
+
+
+<img width="950" height="418" alt="image" src="https://github.com/user-attachments/assets/941e4435-5c9d-41b3-a24d-79c9e3c76664" />
+
 
 In the figure, the vertically continuous values are quantized into 5 levels:
 
