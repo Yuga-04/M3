@@ -43,9 +43,9 @@ Let
 
 The adaptive threshold is defined as:
 
-[
-T(x,y) = m_{xy} + a \cdot \sigma_{xy} + b
-]
+
+<img width="381" height="81" alt="image" src="https://github.com/user-attachments/assets/3fc25e40-544c-490d-912a-b005ca6bb401" />
+
 
 Where:
 
@@ -60,13 +60,9 @@ This formula is directly from the PDF content.
 
 Once the threshold is computed, segmentation is done as:
 
-[
-g(x,y) =
-\begin{cases}
-1 & \text{if } f(x,y) > T(x,y) \
-0 & \text{otherwise}
-\end{cases}
-]
+
+<img width="507" height="160" alt="image" src="https://github.com/user-attachments/assets/8318320c-527f-4774-aaeb-801f726ee34c" />
+
 
 Thus:
 
