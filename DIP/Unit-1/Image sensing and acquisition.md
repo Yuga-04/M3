@@ -60,6 +60,10 @@ This can be done by:
 
 ### **Example from PDF:**
 
+
+<img width="608" height="297" alt="image" src="https://github.com/user-attachments/assets/7d80a684-fcad-4987-90d0-3a8d22c630a5" />
+
+
 A film negative mounted on a drum rotates in one direction, while the sensor moves perpendicularly using a lead screw.
 This generates a complete 2D image, though slow but precise.
 
@@ -88,6 +92,8 @@ A **circular strip** of sensors is used in **medical imaging (CT scans)**.
 A rotating X-ray source + a circular sensor strip creates cross-sectional images (“slice images”).
 
 ---
+<img width="766" height="488" alt="image" src="https://github.com/user-attachments/assets/04e82523-caa5-4522-ba6c-6b52a03a8c94" />
+
 
 ## ⭐ **C) 2D Sensor Arrays (CCD / CMOS Arrays)**
 
@@ -114,6 +120,11 @@ This is the most common method used in **digital cameras**.
 ---
 
 # ⭐ 3. **General Image Acquisition Process (from PDF Figure)** 
+
+
+<img width="793" height="382" alt="image" src="https://github.com/user-attachments/assets/8266f86d-ba78-468c-96fa-dd0d76f8f8af" />
+
+
 
 The typical acquisition stages include:
 
