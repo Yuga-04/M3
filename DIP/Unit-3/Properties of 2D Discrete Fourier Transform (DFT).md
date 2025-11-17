@@ -1,119 +1,108 @@
-Here is a **cleaner, theory-focused 13-mark version** of your answer on **Properties of 2D DFT**, with **much fewer formulas**, keeping only what is required for marks.
-This is exactly the way you should write it in an exam for **13 marks**.
+Here is a **short, clean 13-mark answer** with **ONLY the main formulas + brief theory** for each property.
+This is exactly the way you should write in an exam.
 
 ---
+
+
+<img width="928" height="649" alt="image" src="https://github.com/user-attachments/assets/c9eb3ecd-d58c-49cb-8e53-ca91f82743eb" />
+
+
 
 # ⭐ **Properties of 2D Discrete Fourier Transform (DFT)**
 
-*(13 Marks – Theory Focused)*
+### *(Main Formulas + Short Theory – 13 Marks)*
 
 ---
 
-## **1. Introduction**
+## **1. Linearity Property**
 
-The **2D Discrete Fourier Transform** converts an image from the **spatial domain** (represented by pixel intensities) to the **frequency domain**, where the image is expressed as a combination of sinusoidal components of different frequencies.
-Low-frequency components represent **smooth regions**, while high-frequency components represent **edges and fine details**.
+**Formula:**
 
-Understanding the properties of DFT is important because they simplify image filtering, enhancement, restoration, and many other digital image processing tasks.
 
----
+<img width="732" height="84" alt="image" src="https://github.com/user-attachments/assets/fa0974ad-1b28-4de8-8ea5-f6bf83a01611" />
 
-## **2. Important Properties of 2D DFT**
 
-Below are the major properties with **theoretical explanation only**, suitable for 13-mark answers.
+**Theory:**
+The DFT is linear. A linear combination of images in the spatial domain corresponds to the same linear combination in the frequency domain. This simplifies many image operations like blending and filtering.
 
 ---
 
-## **(i) Linearity Property**
+## **2. Parseval’s Relation (Energy Conservation)**
 
-The DFT is a **linear operation**.
-This means that if two images are combined using addition or scaling, their Fourier transforms can also be combined in the same way.
+**Formula:**
 
-**Meaning:**
-You can transform images individually and then combine their transforms instead of transforming the whole combination at once.
-This is helpful in operations like blending images and applying filters to multiple signals.
 
----
+<img width="458" height="102" alt="image" src="https://github.com/user-attachments/assets/bbf5a06d-97c6-4202-bc7e-2425ff6ff85b" />
 
-## **(ii) Parseval’s Relation (Energy Conservation)**
 
-This property states that the **total energy in an image** (sum of squared magnitude of pixel values) remains the **same** in both spatial and frequency domains.
-
-**Meaning:**
-No information is lost when we convert an image to the frequency domain using DFT.
-This is used to check correctness of transforms and helps measure similarity and energy distribution.
+**Theory:**
+The total energy of an image remains the same in spatial and frequency domains. No information is lost during the Fourier transform.
 
 ---
 
-## **(iii) Translation (Shifting) Property**
+## **3. Translation (Shifting) Property**
 
-If an image is **shifted** (moved) in the spatial domain, the DFT of that image gains a **phase shift**, but the **magnitude** of the transform remains unchanged.
+**Formula:**
 
-**Meaning:**
-Moving an object in an image does not change its frequency content; only the phase changes.
-This property is used in **motion detection**, **image registration**, and **phase correlation**.
 
----
+<img width="555" height="67" alt="image" src="https://github.com/user-attachments/assets/a4b1e4f0-ace2-4b89-99e0-edfb42afcd94" />
 
-## **(iv) Convolution Property**
 
-Convolution in the **spatial domain** corresponds to **multiplication** in the frequency domain.
-
-**Meaning:**
-Filtering an image becomes easier and faster in frequency domain than spatial domain, especially for large images.
-This property is widely used for smoothing, sharpening, and other enhancement operations.
+**Theory:**
+Shifting an image results in a phase shift in the frequency domain but does not change the magnitude. Useful in motion detection and image alignment.
 
 ---
 
-## **(v) Periodicity Property**
+## **4. Convolution Property**
 
-Both the input image and its DFT are **periodic** functions.
-The DFT assumes the image repeats itself in both directions with a period equal to the image size.
+**Formula:**
 
-**Meaning:**
-This helps explain wrap-around effects and aliasing during frequency-domain processing.
-Frequency domain images are always periodic in nature.
 
----
+<img width="463" height="59" alt="image" src="https://github.com/user-attachments/assets/c7b2fdca-7987-4b4f-8bc2-74f7bcc44307" />
 
-## **(vi) Symmetry Property**
 
-For real-valued images (which most images are), the DFT exhibits **conjugate symmetry**.
-This means the frequency spectrum is symmetric around its origin.
-
-**Meaning:**
-You don’t need the full transform for processing—only half the frequency components are sufficient.
-This reduces computation and storage requirements.
+**Theory:**
+Convolution in the spatial domain becomes simple multiplication in the frequency domain. This makes filtering faster and easier.
 
 ---
 
-## **(vii) Scaling Property**
+## **5. Periodicity Property**
 
-Scaling the image in the spatial domain results in the **inverse scaling** in the frequency domain.
+**Formula:**
 
-**Meaning:**
-If an image is compressed, its frequency spread increases;
-if the image is enlarged, the frequency components get narrower.
-This helps understand resolution and zoom operations.
 
----
+<img width="631" height="79" alt="image" src="https://github.com/user-attachments/assets/81815a85-5c45-45bf-a5bd-e23501c043ad" />
 
-## **3. Applications of These Properties**
 
-* Faster and efficient filtering through convolution–multiplication property
-* Edge detection and image enhancement
-* Analytical study of periodic noise
-* Motion estimation using shifting property
-* Compression and reconstruction using symmetry and energy conservation
+**Theory:**
+The DFT is periodic in both frequency directions. The spectrum repeats at intervals equal to the image size.
 
 ---
 
-## **4. Conclusion**
+## **6. Symmetry Property**
 
-The properties of the 2D DFT form the theoretical foundation of frequency-domain image processing.
-They simplify mathematical operations, preserve essential image information, and enable effective filtering, enhancement, and restoration techniques.
-A strong understanding of these properties is essential for applying frequency-domain methods in digital image processing.
+**Formula:**
+
+
+<img width="292" height="59" alt="image" src="https://github.com/user-attachments/assets/4d629e61-7788-4abb-a7ce-503ee14dc50c" />
+
+
+**Theory:**
+For real images, the Fourier spectrum has conjugate symmetry. Only half the frequency data needs to be stored or processed.
 
 ---
 
-If you want, I can also **shorten this to 10 marks**, or **expand to 15 marks**, or make it **handwritten style** for exams.
+## **7. Scaling Property**
+
+**Formula:**
+
+
+<img width="379" height="122" alt="image" src="https://github.com/user-attachments/assets/fc973bfa-ac1a-4634-ae79-7de3a8ccd183" />
+
+
+**Theory:**
+Shrinking an image spreads its spectrum; enlarging compresses it. This explains how image zooming affects frequency content.
+
+---
+
+If you want this answer shortened to **10 marks**, expanded to **15 marks**, or formatted in **handwritten style**, I can do that too.
