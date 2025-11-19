@@ -1,95 +1,126 @@
----
+Here is a **clean, well-organized, exam-ready answer (13 marks)** for:
 
-## 🗑️ Deleting Documents in MongoDB Using Node.js
-
-### 🔹 Introduction
-MongoDB is a NoSQL database that stores data in flexible JSON-like documents. In Node.js applications, MongoDB operations are typically handled using the **Mongoose** library or the **native MongoDB driver**. Deleting documents is a key part of CRUD operations, allowing developers to remove unwanted or obsolete data.
+# **Explain deleteOne() and deleteMany() in MongoDB with examples. (13 Marks)**
 
 ---
 
-## 🔸 1. Setup: Connecting MongoDB in Node.js
+# **1. deleteOne() – Delete a Single Document**
 
-Before performing delete operations, connect to MongoDB:
+**Syntax:**
 
 ```js
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/mydb');
+db.collection.deleteOne(filter);
 ```
 
-Define a schema and model:
+### **Meaning:**
+
+* Deletes the **first document** that matches the filter condition.
+
+### **Example:**
 
 ```js
-const userSchema = new mongoose.Schema({ name: String, age: Number });
-const User = mongoose.model('User', userSchema);
+const { MongoClient } = require('mongodb');
+const client = new MongoClient('mongodb://localhost:27017');
+const dbName = 'collegeDB';
+
+async function deleteSingle() {
+    await client.connect();
+    console.log("Connected successfully to server");
+
+    const db = client.db(dbName);
+    const collection = db.collection('students');
+
+    const result = await collection.deleteOne({ name: "Anita" });
+    console.log("Documents deleted:", result.deletedCount);
+
+    client.close();
+}
+
+deleteSingle();
 ```
+
+### **Explanation:**
+
+* The filter `{ name: "Anita" }` is used.
+* Only one matching document is deleted.
+* `deletedCount` confirms how many documents were removed.
 
 ---
 
-## 🔸 2. Deleting a Single Document
+# **2. deleteMany() – Delete Multiple Documents**
 
-### ✅ Method: `deleteOne()`
-
-Deletes the **first matching document** based on the filter.
+**Syntax:**
 
 ```js
-User.deleteOne({ name: 'Ajitha' }, (err) => {
-  if (err) console.error(err);
-  else console.log('One document deleted');
-});
+db.collection.deleteMany(filter);
 ```
 
-### ✅ Method: `findOneAndDelete()`
+### **Meaning:**
 
-Finds and deletes a document, and returns the deleted document.
+* Deletes **all documents** that match the filter.
+
+### **Example:**
 
 ```js
-User.findOneAndDelete({ name: 'Ajitha' }, (err, doc) => {
-  if (err) console.error(err);
-  else console.log('Deleted:', doc);
-});
+const { MongoClient } = require('mongodb');
+const client = new MongoClient('mongodb://localhost:27017');
+const dbName = 'collegeDB';
+
+async function deleteMultiple() {
+    await client.connect();
+
+    const db = client.db(dbName);
+    const collection = db.collection('students');
+
+    const result = await collection.deleteMany({ course: "BCA" });
+    console.log("Documents deleted:", result.deletedCount);
+
+    client.close();
+}
+
+deleteMultiple();
+```
+
+### **Explanation:**
+
+* The filter `{ course: "BCA" }` matches multiple documents.
+* All are removed.
+* `deletedCount` returns number of deleted documents.
+
+---
+
+# **3. Comparison Table**
+
+| Method           | Purpose                            | Example             | Deletes          |
+| ---------------- | ---------------------------------- | ------------------- | ---------------- |
+| **deleteOne()**  | Deletes the first matched document | `{ name: "Anita" }` | First match only |
+| **deleteMany()** | Deletes all matched documents      | `{ course: "BCA" }` | All matches      |
+
+---
+
+# **4. Output Example**
+
+```
+Connected successfully to server
+Documents deleted: 3
 ```
 
 ---
 
-## 🔸 3. Deleting Multiple Documents
+# **5. Advantages**
 
-### ✅ Method: `deleteMany()`
-
-Deletes **all documents** that match the filter.
-
-```js
-User.deleteMany({ age: { $lt: 18 } }, (err) => {
-  if (err) console.error(err);
-  else console.log('Multiple documents deleted');
-});
-```
+* Allows targeted or bulk deletion.
+* Ensures data consistency.
+* Can include conditional filters for safety.
 
 ---
 
-## 🔸 4. Error Handling and Confirmation
+# **Conclusion**
 
-Always handle errors and confirm deletion:
-
-```js
-User.deleteOne({ name: 'Ajitha' })
-  .then(result => console.log(result.deletedCount))
-  .catch(err => console.error(err));
-```
+* **deleteOne()** → removes a single matching document.
+* **deleteMany()** → removes all matching documents.
+* Both return **deletedCount** to confirm deletions.
 
 ---
 
-## 🔸 5. Summary Table
-
-| Method               | Purpose                          | Returns         |
-|----------------------|----------------------------------|------------------|
-| `deleteOne()`        | Deletes first matching document  | Result object    |
-| `findOneAndDelete()` | Deletes and returns the document | Deleted document |
-| `deleteMany()`       | Deletes all matching documents   | Result object    |
-
----
-
-## 🔸 Conclusion
-
-MongoDB provides flexible methods to delete single or multiple documents using Node.js. These operations are essential for maintaining clean and relevant datasets. With proper error handling and confirmation, developers can ensure safe and efficient data deletion.
-
----
+If you want, I can format this answer into **10 marks**, **8 marks**, or **short notes** style.
